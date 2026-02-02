@@ -1,0 +1,45 @@
+{
+  "prostorije": {
+    "dnevna_soba": {
+      "senzor_temperature": {
+        "state_topic": "kuca/dnevnasoba/senzor_temperature/get",
+        "opis": "Senzor za mjerenje temperature zraka",
+        "tip": "sensor"
+      },
+      "senzor_pokreta": {
+        "state_topic": "kuca/dnevnasoba/senzor_pokreta/get",
+        "opis": "PIR senzor za detekciju pokreta",
+        "tip": "sensor"
+      },
+      "senzor_dima": {
+        "state_topic": "kuca/dnevnasoba/senzor_dima/get",
+        "opis": "Detektor dima i požara",
+        "tip": "sensor"
+      },
+      "prozor": {
+        "command_topic": "kuca/dnevnasoba/prozor/get",
+        "state_topic": "kuca/dnevnasoba/prozor/set",
+        "opis": "Upravljanje motorom prozora ili roleta",
+        "tip": "switch"
+      },
+      "termostat": {
+        "command_topic": "kuca/dnevnasoba/termostat/get",
+        "state_topic": "kuca/dnevnasoba/termostat/set",
+        "opis": "Postavka željene temperature",
+        "tip": "number"
+      },
+      "ventilator": {
+        "command_topic": "kuca/dnevnasoba/ventilator/get",
+        "state_topic": "kuca/dnevnasoba/ventilator/set",
+        "opis": "Kontrola rada ventilatora",
+        "tip": "switch"
+      },
+      "svjetlo": {
+        "command_topic": "kuca/dnevnasoba/svjetlo/get",
+        "state_topic": "kuca/dnevnasoba/svjetlo/set",
+        "opis": "Glavno svjetlo",
+        "tip": "switch"
+      }
+    }
+  }
+}
