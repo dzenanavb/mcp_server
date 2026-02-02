@@ -111,6 +111,6 @@ class MCPHandler(BaseHTTPRequestHandler):
 # Start server
 # -------------------------------------------------
 if __name__ == "__main__":
-    server = HTTPServer(("127.0.0.1", 8040), MCPHandler)
-    logger.info("SmartHome MCP server running on http://127.0.0.1:8040")
+    server = HTTPServer(("0.0.0.0", 5000), MCPHandler)
+    logger.info("SmartHome MCP server running on http://0.0.0.0:5000")
     server.serve_forever()
