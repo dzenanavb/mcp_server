@@ -1,44 +1,69 @@
 {
+  "mqtt": {
+    "host": "127.0.0.1",
+    "port": 1883,
+    "keepalive": 60
+  },
+  "agent": {
+    "poll_interval": 180,
+    "max_iterations": 8,
+    "action_cooldown": 300,
+    "action_history_size": 50
+  },
+  "pragovi": {
+    "temperatura_max": 28,
+    "temperatura_min": 18,
+    "termostat_default": 21,
+    "noc_pocetak": 22,
+    "noc_kraj": 6
+  },
   "prostorije": {
     "dnevna_soba": {
       "senzor_temperature": {
-        "state_topic": "kuca/dnevnasoba/senzor_temperature/get",
+        "state_topic": "kuca/dnevnasoba/senzor_temperature/state",
         "opis": "Senzor za mjerenje temperature zraka",
-        "tip": "sensor"
+        "tip": "sensor",
+        "item_name": "Dnevna_Soba_Senzor_Temperature"
       },
       "senzor_pokreta": {
-        "state_topic": "kuca/dnevnasoba/senzor_pokreta/get",
+        "state_topic": "kuca/dnevnasoba/senzor_pokreta/state",
         "opis": "PIR senzor za detekciju pokreta",
-        "tip": "sensor"
+        "tip": "sensor",
+        "item_name": "Dnevna_Soba_Senzor_Pokreta"
       },
       "senzor_dima": {
-        "state_topic": "kuca/dnevnasoba/senzor_dima/get",
+        "state_topic": "kuca/dnevnasoba/senzor_dima/state",
         "opis": "Detektor dima i požara",
-        "tip": "sensor"
+        "tip": "sensor",
+        "item_name": "Dnevna_Soba_Detektor_Dima"
       },
       "prozor": {
-        "command_topic": "kuca/dnevnasoba/prozor/get",
-        "state_topic": "kuca/dnevnasoba/prozor/set",
+        "state_topic": "kuca/dnevnasoba/prozor/state",
+        "command_topic": "kuca/dnevnasoba/prozor/set",
         "opis": "Upravljanje motorom prozora ili roleta",
-        "tip": "switch"
+        "tip": "switch",
+        "item_name": "Dnevna_Soba_Kontrola_ProzoraRoleta"
       },
       "termostat": {
-        "command_topic": "kuca/dnevnasoba/termostat/get",
-        "state_topic": "kuca/dnevnasoba/termostat/set",
+        "state_topic": "kuca/dnevnasoba/termostat/state",
+        "command_topic": "kuca/dnevnasoba/termostat/set",
         "opis": "Postavka željene temperature",
-        "tip": "number"
+        "tip": "number",
+        "item_name": "Dnevna_Soba_Termostat_Zadana_Temperatura"
       },
       "ventilator": {
-        "command_topic": "kuca/dnevnasoba/ventilator/get",
-        "state_topic": "kuca/dnevnasoba/ventilator/set",
+        "state_topic": "kuca/dnevnasoba/ventilator/state",
+        "command_topic": "kuca/dnevnasoba/ventilator/set",
         "opis": "Kontrola rada ventilatora",
-        "tip": "switch"
+        "tip": "switch",
+        "item_name": "Dnevna_Soba_Ventilator"
       },
       "svjetlo": {
-        "command_topic": "kuca/dnevnasoba/svjetlo/get",
-        "state_topic": "kuca/dnevnasoba/svjetlo/set",
+        "state_topic": "kuca/dnevnasoba/svjetlo/state",
+        "command_topic": "kuca/dnevnasoba/svjetlo/set",
         "opis": "Glavno svjetlo",
-        "tip": "switch"
+        "tip": "switch",
+        "item_name": "Dnevna_Soba_Svjetlo"
       }
     }
   }
